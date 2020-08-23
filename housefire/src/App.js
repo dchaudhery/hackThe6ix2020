@@ -22,14 +22,14 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Grid container direction = "row">
+        <Grid container direction = "row" style={{ borderBottom: "3px solid #713BDB" }}>
           <Grid item xs={2}>
             <img src={sidebar}/>
           </Grid>
           <Grid container item direction = "column" xs={8}>
-            <Grid item container direction = "row" style={{ borderBottom: "2px solid #713BDB" }}>
+            <Grid item container direction = "row" >
               <Grid item>
-                <img src={headerpic}/>
+                <img src={headerpic} width="1015"/>
               </Grid>
             </Grid>
             <Grid container item direction = "row">
@@ -42,7 +42,7 @@ class App extends React.Component {
                 }
               </Grid>
               
-              <Grid item container direction = "column" xs={3} style={{ marginBottom: "2px", borderLeft: "2px solid #713BDB" }}>
+              <Grid item container direction = "column" xs={3} style={{ marginBottom: "2px", borderLeft: "2px solid #713BDB", borderRight: "2px solid #713BDB" }}>
                 <Grid item><Typography variant="h5" style={{color: "#713BDB"}}>Image Upload</Typography></Grid>
                 <Grid item><label style={{fontSize: "25px"}}>Before Fire<Input type="file" style={{display: "none"}}/></label></Grid>
                 <Grid item><label style={{fontSize: "25px"}}>After Fire<Input type="file" name="after" style={{display: "none"}}/></label></Grid>
@@ -63,6 +63,7 @@ class App extends React.Component {
                     Calculate
                   </Button>
                 </Grid>
+                <Grid item style={{height:"450px"}}></Grid>
               </Grid>
             </Grid>
           </Grid>
